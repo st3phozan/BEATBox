@@ -28,11 +28,11 @@ public class TestNoteShooter : MonoBehaviour
             GameObject NewNote = Instantiate(testNote, forward.position, Quaternion.identity);
             NewNote.GetComponent<TestNote>().target = positions[0];
         }
-        else if (MidiMaster.GetKeyDown(note) && note== midiNotes[0]){
+        if (MidiMaster.GetKeyDown(note) && note== midiNotes[1]){
             GameObject NewNote =Instantiate(testNote, down.position, Quaternion.Euler(new Vector3(90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[1];
         }
-        else if (MidiMaster.GetKeyDown(note)&&note == midiNotes[0]){
+        if (MidiMaster.GetKeyDown(note)&&note == midiNotes[2]){
             GameObject NewNote =Instantiate(testNote, up.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[2];
     }

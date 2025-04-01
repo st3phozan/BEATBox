@@ -1143,10 +1143,12 @@ MonoBehaviour:
   down: {fileID: 306832380}
   up: {fileID: 883324831}
   forward: {fileID: 2010439249}
+  currMidi: 0
   positions:
   - {fileID: 306254242}
   - {fileID: 1056087023}
   - {fileID: 580684639}
+  midiNotes: 3a000000480000002f000000
 --- !u!65 &2010439246
 BoxCollider:
   m_ObjectHideFlags: 0
