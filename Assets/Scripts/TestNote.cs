@@ -6,6 +6,8 @@ public class TestNote : MonoBehaviour
 {
     Rigidbody rb;
     private Vector3 randomDirection;
+    public Transform target = null;
+    public float speed = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +17,23 @@ public class TestNote : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-
-        float forceMagnitude = 4f; // Adjust as needed
-        rb.AddForce(randomDirection * forceMagnitude, ForceMode.Force);
+        var step = speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        //float forceMagnitude = 4f; // Adjust as needed
+        // rb.AddForce(randomDirection * forceMagnitude, ForceMode.Force);
     }
     Vector3 GetRandomForward(Vector3 forward, float maxAngle)
     {
         float randomAngle = Random.Range(-maxAngle, maxAngle); // Random angle from left to right
         return Quaternion.AngleAxis(randomAngle, Vector3.up) * forward;
     }
-    void OnCollisionEnter(Collision other) {
-        Destroy(gameObject);
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "fist")
+        {
+            Destroy(gameObject);
+        }
     }
 }
