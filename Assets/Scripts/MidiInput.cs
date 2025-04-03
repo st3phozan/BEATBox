@@ -16,7 +16,7 @@ void Update()
         {
             if (MidiMaster.GetKeyDown(note))
             {
-                Debug.Log($"MIDI Note Received: {note}");
+                //Debug.Log($"MIDI Note Received: {note}");
             }
         }
     }
