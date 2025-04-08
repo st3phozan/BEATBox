@@ -8,6 +8,7 @@ public class FistScript : MonoBehaviour
     public List<Transform> positions = new List<Transform>(); 
     public float zpos = -1.12f;
     public int points = 0;
+    public ScoreManager sm;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,7 @@ public class FistScript : MonoBehaviour
     {
         if (other.gameObject.tag == "note")
         {
-            points +=1;
+            sm.score +=1;
             Debug.Log(points);
         }
     }
