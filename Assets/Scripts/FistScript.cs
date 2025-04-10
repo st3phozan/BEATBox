@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class FistScript : MonoBehaviour
 {
     public GameObject hitbox;
@@ -11,6 +12,7 @@ public class FistScript : MonoBehaviour
     public ScoreManager sm;
     public bool isTitle = false, isCalibrate = false, startGame = false;
     public bool isTreble = false;
+    public TMP_Text score;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,7 @@ public class FistScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M)){
             sm.MissTreble();
         }
+	score.text = points.ToString();
 
        
     }
@@ -79,6 +82,7 @@ public class FistScript : MonoBehaviour
     {
         if (other.gameObject.tag == "note")
         {
+	    points +=1;
             if (isTreble){
             sm.HitTreble();
             }

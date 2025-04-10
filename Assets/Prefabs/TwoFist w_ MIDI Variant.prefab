@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa55f93f2f1a6184eb4f383351bef5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectName: NewGloveTest2
+  ObjectName: NewGloveTest3
   PositionOffset: {x: 0, y: 0, z: 0}
   RotationOffset: {x: 0, y: 0, z: 0}
   useObjectOrientation: 1
@@ -315,8 +315,10 @@ MonoBehaviour:
   points: 0
   sm: {fileID: 0}
   isTitle: 0
+  isCalibrate: 0
   startGame: 0
   isTreble: 0
+  score: {fileID: 0}
 --- !u!1 &2268875919517090976
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +376,7 @@ Transform:
   m_GameObject: {fileID: 2744867491144126610}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.54745, y: 0.54745, z: 0.54745}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -872,8 +874,8 @@ Camera:
   m_GameObject: {fileID: 6818048409066488921}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.060102876, g: 0.054788172, b: 0.16981131, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1407,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5108029019650720860, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6298109651417419356, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
       propertyPath: m_Name

@@ -11,6 +11,7 @@ public class TitleScreen : MonoBehaviour
     public Image fistBump;
     public Sprite preBump, postBump;
     public string SceneName = "SampleScene";
+    public float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class TitleScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
+	Debug.Log(distance);
         if (trebleScript.startGame == true || bassScript.startGame == true){
             StartGame();
         }

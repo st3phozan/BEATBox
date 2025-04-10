@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     public float LevelTime = 180f;
     public float LevelStartTime = 0;
+    public float distance;
 
 
     // Start is called before the first frame update

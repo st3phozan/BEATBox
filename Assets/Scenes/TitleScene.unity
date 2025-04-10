@@ -559,6 +559,22 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.060102876
       objectReference: {fileID: 0}
+    - target: {fileID: 2090901275425389646, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830357232522079452, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882259924162629309, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: ObjectName
+      value: NewGloveTest3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952290009147339303, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4655791581308999939, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: m_Name
       value: TwoFist w_ MIDI Variant

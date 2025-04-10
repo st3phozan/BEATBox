@@ -20,6 +20,9 @@ public class GloveCalibration : MonoBehaviour
     public GameObject HUD, CalibMenu;
 
 
+    public float distance;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,40 +36,44 @@ public class GloveCalibration : MonoBehaviour
     IEnumerator RunCalibration(){
         instructions.text = "Get Ready to Calibrate";
         yield return new WaitForSeconds(10);
+	instructions.text = "Resting Positions";
+
+        yield return new WaitForSeconds(delay);
+
 
         fsTreble.RestPos();
         fsBass.RestPos();
-        instructions.text = "Resting Positions";
+        instructions.text = "Forward Punch";
 
         yield return new WaitForSeconds(delay);
 
         fsTreble.ForwardPunch();
         fsBass.ForwardPunch();
-        instructions.text = "Forward Punch";
+        instructions.text = "Upper Left";
 
         yield return new WaitForSeconds(delay);
 
         fsTreble.UpperLeft();
         fsBass.UpperLeft();
-        instructions.text = "Upper Left";
+        instructions.text = "Upper Right";
 
         yield return new WaitForSeconds(delay);
 
         fsTreble.UpperRight();
         fsBass.UpperRight();
-        instructions.text = "Upper Right";
+        instructions.text = "Lower Left";
 
         yield return new WaitForSeconds(delay);
 
         fsTreble.LowerLeft();
         fsBass.LowerLeft();
-        instructions.text = "Lower Left";
+        instructions.text = "Lower Right";
 
         yield return new WaitForSeconds(delay);
 
         fsTreble.LowerRight();
         fsBass.LowerRight();
-        instructions.text = "Lower Right";
+        instructions.text = "DONE!";
         yield return new WaitForSeconds(delay);
 
         instructions.text = "DONE!";
@@ -80,6 +87,7 @@ public class GloveCalibration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+	
         if (finishCalib){
             if (trebleScript.startGame == true || bassScript.startGame == true){
                 StartGame();
