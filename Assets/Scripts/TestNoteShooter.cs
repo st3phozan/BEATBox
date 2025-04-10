@@ -6,7 +6,7 @@ using MidiJack;
 public class TestNoteShooter : MonoBehaviour
 {
     public GameObject testNote;
-    public Transform down, up, forward;
+    public Transform ldown, lup, rdown, rup, forward;
     public int currMidi;
     public List<Transform> positions = new List<Transform>(); 
     public List<int> midiNotes = new List<int>(); 
@@ -29,12 +29,20 @@ public class TestNoteShooter : MonoBehaviour
             NewNote.GetComponent<TestNote>().target = positions[0];
         }
         else if (MidiMaster.GetKeyDown(note) && note== midiNotes[1]){
-            GameObject NewNote =Instantiate(testNote, down.position, Quaternion.Euler(new Vector3(90, 0, 0)));
+            GameObject NewNote =Instantiate(testNote, ldown.position, Quaternion.Euler(new Vector3(90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[1];
         }
-        else if (MidiMaster.GetKeyDown(note)&&note == midiNotes[2]){
-            GameObject NewNote =Instantiate(testNote, up.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+        else if (MidiMaster.GetKeyDown(note) && note== midiNotes[2]){
+            GameObject NewNote =Instantiate(testNote, rdown.position, Quaternion.Euler(new Vector3(90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[2];
+        }
+        else if (MidiMaster.GetKeyDown(note)&&note == midiNotes[3]){
+            GameObject NewNote =Instantiate(testNote, lup.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            NewNote.GetComponent<TestNote>().target = positions[3];
+    }
+    else if (MidiMaster.GetKeyDown(note)&&note == midiNotes[4]){
+            GameObject NewNote =Instantiate(testNote, rup.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            NewNote.GetComponent<TestNote>().target = positions[4];
     }
                 //Debug.Log($"MIDI Note Received: {note}");
             }

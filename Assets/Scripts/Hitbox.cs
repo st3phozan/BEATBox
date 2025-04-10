@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
-    
+    public ScoreManager sm;
+    public bool isTreble = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,13 @@ public class Hitbox : MonoBehaviour
         {
             Destroy(other.gameObject);
             Debug.Log("missed punch");
+            if (isTreble){
+                sm.MissTreble();
+            }
+            else{
+                sm.MissBass();
+            }
+            
         }
     }
     
