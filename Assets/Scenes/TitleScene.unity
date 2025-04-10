@@ -543,6 +543,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.054788172
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.060102876
+      objectReference: {fileID: 0}
     - target: {fileID: 4655791581308999939, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: m_Name
       value: TwoFist w_ MIDI Variant

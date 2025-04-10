@@ -31,6 +31,9 @@ public class GloveCalibration : MonoBehaviour
         StartCoroutine(RunCalibration());
     }
     IEnumerator RunCalibration(){
+        instructions.text = "Get Ready to Calibrate";
+        yield return new WaitForSeconds(10);
+
         fsTreble.RestPos();
         fsBass.RestPos();
         instructions.text = "Resting Positions";
@@ -69,8 +72,8 @@ public class GloveCalibration : MonoBehaviour
         instructions.text = "DONE!";
         finishCalib = true;
         readyStart.SetActive(true);
-        //trebleScript.isCalibrate = true;
-        //bassScript.isCalibrate = true;
+        trebleScript.isCalibrate = true;
+        bassScript.isCalibrate = true;
 
     }
 
