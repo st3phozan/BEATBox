@@ -134,8 +134,8 @@ public class EyeManager : MonoBehaviour
             {
                 StopPlaying();
             }
-            SetFrame(frameIndex, LeftEye);
-            SetFrame(frameIndex, RightEye, true);
+            SetFrame(frameIndex, LeftEye, true);
+            SetFrame(frameIndex, RightEye, false);
         }
 
         if (inspectorToggle)
