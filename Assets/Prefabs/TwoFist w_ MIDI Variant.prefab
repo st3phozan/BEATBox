@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 3184137758703008831}
+  otherGlove: {fileID: 900829525619701326}
   positions:
   - {fileID: 1426707555745025977}
   - {fileID: 8435035656836552979}
@@ -1359,6 +1360,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 846678474325076327, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
+      propertyPath: otherGlove
+      value: 
+      objectReference: {fileID: 1776765314502754974}
     - target: {fileID: 1980373493533008145, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
       propertyPath: m_Name
       value: TwoFist w_ MIDI Variant
@@ -1480,6 +1485,11 @@ PrefabInstance:
       addedObject: {fileID: 6790680309444836165}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
+--- !u!1 &900829525619701326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6298109651417419356, guid: 878f1889954070a46ae3721fae9816bd, type: 3}
+  m_PrefabInstance: {fileID: 6622265031391131666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1279292866708258231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5343508726468380069, guid: 878f1889954070a46ae3721fae9816bd, type: 3}

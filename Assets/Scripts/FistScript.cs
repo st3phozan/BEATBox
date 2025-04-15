@@ -6,6 +6,8 @@ using TMPro;
 public class FistScript : MonoBehaviour
 {
     public GameObject hitbox;
+
+    public GameObject otherGlove; 
     public List<Transform> positions = new List<Transform>(); 
     public float zpos = -1.12f;
     public int points = 0;
@@ -48,6 +50,16 @@ public class FistScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.M)){
             sm.MissTreble();
+        }
+        if (Vector3.Distance (this.gameObject.transform.position, otherGlove.transform.position) <= .2f){
+            if (isTitle){
+                startGame = true;
+                isTitle = false;
+            }
+            else if (isCalibrate){
+                startGame = true;
+                isCalibrate = false;
+            }
         }
 	score.text = points.ToString();
 
