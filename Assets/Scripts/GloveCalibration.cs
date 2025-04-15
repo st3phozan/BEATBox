@@ -11,8 +11,8 @@ public class GloveCalibration : MonoBehaviour
     public TMP_Text instructions; 
     public bool finishCalib = false;
     public ScoreManager sm; 
-
-
+    public GameObject treble, bass;
+    public float distance;
     public FistScript trebleScript, bassScript;
     public Image fistBump;
     public Sprite preBump, postBump;
@@ -20,7 +20,7 @@ public class GloveCalibration : MonoBehaviour
     public GameObject HUD, CalibMenu;
 
 
-    public float distance;
+    //public float distance;
 
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class GloveCalibration : MonoBehaviour
     }
     IEnumerator RunCalibration(){
         instructions.text = "Get Ready to Calibrate";
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(delay);
 	instructions.text = "Resting Positions";
 
         yield return new WaitForSeconds(delay);
@@ -89,9 +89,12 @@ public class GloveCalibration : MonoBehaviour
     {
 	
         if (finishCalib){
-            if (trebleScript.startGame == true || bassScript.startGame == true){
-                StartGame();
-            }
+	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
+	Debug.Log(distance);
+        if (distance <=.2f && distance != 0){
+            StartGame();
+        }
+            
         }
     }
      public void StartGame(){

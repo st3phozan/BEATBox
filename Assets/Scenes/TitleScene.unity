@@ -356,6 +356,7 @@ MonoBehaviour:
   preBump: {fileID: 21300000, guid: af998be31c1322b47b201b6cf5e67469, type: 3}
   postBump: {fileID: 21300000, guid: 79868e9d7d13e444d9b18126303e9642, type: 3}
   SceneName: SampleScene
+  distance: 0
 --- !u!114 &247105358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,37 +544,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
+    - target: {fileID: 3828776783437557665, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: midiNotes.Array.data[3]
+      value: 71
       objectReference: {fileID: 0}
-    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.16981131
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.054788172
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598433699233184235, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.060102876
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090901275425389646, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2830357232522079452, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3882259924162629309, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: ObjectName
-      value: NewGloveTest3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3952290009147339303, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
+    - target: {fileID: 3828776783437557665, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: midiNotes.Array.data[4]
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4655791581308999939, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: m_Name

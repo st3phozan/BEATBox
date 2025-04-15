@@ -27,7 +27,7 @@ public class TitleScreen : MonoBehaviour
     {
 	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
 	Debug.Log(distance);
-        if (trebleScript.startGame == true || bassScript.startGame == true){
+        if (distance <=.2f && distance != 0){
             StartGame();
         }
     }

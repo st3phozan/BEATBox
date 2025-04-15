@@ -44,7 +44,7 @@ public class TestNoteShooter : MonoBehaviour
             GameObject NewNote =Instantiate(testNote, rup.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[4];
     }
-                //Debug.Log($"MIDI Note Received: {note}");
+                Debug.Log($"MIDI Note Received: {note}");
             }
         }
         /*

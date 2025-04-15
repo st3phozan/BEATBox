@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using extOSC;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -14,15 +15,22 @@ public class ScoreManager : MonoBehaviour
     public Sprite great, yikes;
     public Animator feedbackAnimTreble, feedbackAnimBass;
 
-    public float LevelTime = 180f;
+    public float LevelTime = 121f;
     public float LevelStartTime = 0;
     public float distance;
+
+    //for Chataigne
+    public string ipAddress = "127.0.0.1";
+    public int port = 9000;
+    private OSCTransmitter transmitter;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //transmitter = gameObject.GetComponent<OSCTransmitter>
+	//transmitter.RemoteHost = ipAddress;
+	//transmitter.RemotePort = port;
     }
 
     // Update is called once per frame
@@ -49,6 +57,8 @@ public class ScoreManager : MonoBehaviour
     }
     public void LevelBegin(){
         LevelStartTime = Time.time;
+	var message = new OSCMessage("/startSong");
+	//transmitter.Send(message);
     }
     public void HitTreble(){
         score += 1;
