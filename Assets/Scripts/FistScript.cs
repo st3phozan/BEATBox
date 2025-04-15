@@ -51,7 +51,7 @@ public class FistScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M)){
             sm.MissTreble();
         }
-        if (Vector3.Distance (this.gameObject.transform.position, otherGlove.transform.position) <= .2f){
+        /*if (Vector3.Distance (this.gameObject.transform.position, otherGlove.transform.position) <= .2f){
             if (isTitle){
                 startGame = true;
                 isTitle = false;
@@ -60,7 +60,7 @@ public class FistScript : MonoBehaviour
                 startGame = true;
                 isCalibrate = false;
             }
-        }
+        }*/
 	score.text = points.ToString();
 
        

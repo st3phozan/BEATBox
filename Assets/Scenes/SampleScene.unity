@@ -297,11 +297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004932690618193529, guid: 33746b76ce5c0484fad29d0a4a5bbcce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7000008
+      value: -3.7000012
       objectReference: {fileID: 0}
     - target: {fileID: 7004932690618193529, guid: 33746b76ce5c0484fad29d0a4a5bbcce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8000007
+      value: -6.8000026
       objectReference: {fileID: 0}
     - target: {fileID: 7004932690618193529, guid: 33746b76ce5c0484fad29d0a4a5bbcce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -940,16 +940,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868656414}
   m_CullTransparentMesh: 1
---- !u!4 &1199920361 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6790680309444836165, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-  m_PrefabInstance: {fileID: 3072826840081522646}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1487042322 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5313080534550228226, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-  m_PrefabInstance: {fileID: 3072826840081522646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831806687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,18 +1028,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 188439919522750740, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: ldown
-      value: 
-      objectReference: {fileID: 1199920361}
     - target: {fileID: 3452947136538550343, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: sm
       value: 
       objectReference: {fileID: 388360972}
-    - target: {fileID: 3828776783437557665, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
-      propertyPath: ldown
-      value: 
-      objectReference: {fileID: 1487042322}
+    - target: {fileID: 3882259924162629309, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: ObjectName
+      value: Bass
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952290009147339303, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4655791581308999939, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: m_Name
       value: TwoFist w/ MIDI
@@ -1109,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 7016630316017615260, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662944453645629506, guid: d1f23f5416a8a1040a4afb3f288e3043, type: 3}
+      propertyPath: ObjectName
+      value: Treble
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

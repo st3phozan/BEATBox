@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class TitleScreen : MonoBehaviour
 {
     public GameObject treble, bass, titleUI; 
+    public bool isStart = false;
     public FistScript trebleScript, bassScript;
     public Image fistBump;
     public Sprite preBump, postBump;
@@ -27,8 +28,9 @@ public class TitleScreen : MonoBehaviour
     {
 	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
 	Debug.Log(distance);
-        if (trebleScript.startGame == true || bassScript.startGame == true){
+        if (distance <=.2f && distance!=0 && !isStart){
             StartGame();
+	    isStart = true;
         }
     }
     public void StartGame(){
