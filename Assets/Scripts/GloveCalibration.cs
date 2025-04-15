@@ -35,7 +35,7 @@ public class GloveCalibration : MonoBehaviour
     }
     IEnumerator RunCalibration(){
         instructions.text = "Get Ready to Calibrate";
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(delay);
 	instructions.text = "Resting Positions";
 
         yield return new WaitForSeconds(delay);

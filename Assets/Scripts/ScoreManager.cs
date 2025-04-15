@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public float score = 0;
+    public float animHitTrigger = 4, an;
     public float total = 20; 
     public bool thresholdMet = false;
     public Slider caesuraHealth; 
@@ -13,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     public Image feedbackTreble, feedbackBass;
     public Sprite great, yikes;
     public Animator feedbackAnimTreble, feedbackAnimBass;
+    public AnimationTriggers triggers;
 
     public float LevelTime = 180f;
     public float LevelStartTime = 0;
@@ -44,6 +46,9 @@ public class ScoreManager : MonoBehaviour
             else{
                 EndFail();
             }
+        }
+        if (score % 4 == 0 && score != 0){
+            triggers.Hurt = true;
         }
         
     }
