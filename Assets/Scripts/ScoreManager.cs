@@ -33,7 +33,7 @@ public class ScoreManager : MonoBehaviour
         if (score/total >= .8){
             thresholdMet = true;     
         }
-        caesuraHealth.value = (total-score)/total;
+        caesuraHealth.value = score/total;
 
         //music timer
         float timerDuration = Time.time - LevelStartTime;
