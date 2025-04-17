@@ -208,7 +208,7 @@
       "url": "https://packages.unity.com"
     },
     "jp.keijiro.osc-jack": {
-      "version": "file:C:/Users/st3ph/Downloads/OscJack-main/OscJack-main/Packages/jp.keijiro.osc-jack",
+      "version": "file:OscJack-main/OscJack-main/Packages/jp.keijiro.osc-jack",
       "depth": 0,
       "source": "local",
       "dependencies": {}
