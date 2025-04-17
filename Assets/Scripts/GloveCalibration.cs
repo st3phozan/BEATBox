@@ -17,6 +17,8 @@ public class GloveCalibration : MonoBehaviour
     public Image fistBump;
     public Sprite preBump, postBump;
     public GameObject readyStart;
+    public GameObject treble, bass;
+    public GameObject cameraM;
     public GameObject HUD, CalibMenu;
 
 
@@ -37,12 +39,14 @@ public class GloveCalibration : MonoBehaviour
         instructions.text = "Get Ready to Calibrate";
         yield return new WaitForSeconds(delay);
 	instructions.text = "Resting Positions";
-
+	
         yield return new WaitForSeconds(delay);
 
-
+	
         fsTreble.RestPos();
         fsBass.RestPos();
+	float xMidpt = (treble.transform.position.x + bass.transform.position.x)/2;
+	cameraM.transform.position = new Vector3(xMidpt, (treble.transform.position.y + .53f), treble.transform.position.z + 1.63f);
         instructions.text = "Forward Punch";
 
         yield return new WaitForSeconds(delay);

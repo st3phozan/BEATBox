@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.iam1337.extosc": "file:C:/Users/st3ph/Downloads/extOSC-master/extOSC-master/Assets/extOSC",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.universal": "14.0.11",

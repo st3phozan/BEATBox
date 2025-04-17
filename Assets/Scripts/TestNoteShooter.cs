@@ -19,7 +19,7 @@ public class TestNoteShooter : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
          for (int note = 0; note < 128; note++)
         {
             if (MidiMaster.GetKeyDown(note))
@@ -47,7 +47,7 @@ public class TestNoteShooter : MonoBehaviour
                 //Debug.Log($"MIDI Note Received: {note}");
             }
         }
-        
+        */
         if (Input.GetKeyDown(KeyCode.A)){
             GameObject NewNote = Instantiate(testNote, forward.position, Quaternion.identity);
             NewNote.GetComponent<TestNote>().target = positions[0];

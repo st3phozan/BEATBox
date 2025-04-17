@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     public Sprite great, yikes;
     public Animator feedbackAnimTreble, feedbackAnimBass;
     public AnimationTriggers triggers;
-    public AbletonTrigger aT;
+    //public AbletonTrigger aT;
 
     public OSCJackTestSender oscCtrl;
 
