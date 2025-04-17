@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
-    public GameObject treble, bass, titleUI; 
+    public GameObject treble, bass, titleUI, calibUI, caesura; 
     public bool isStart = false;
     public FistScript trebleScript, bassScript;
     public Image fistBump;
@@ -16,10 +16,12 @@ public class TitleScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+	caesura.SetActive(false);
         trebleScript = treble.GetComponent<FistScript>();
         bassScript = bass.GetComponent<FistScript>();
         trebleScript.isTitle = true;
         bassScript.isTitle = true;
+	calibUI.SetActive(false);
         fistBump.sprite = preBump;
     }
 
@@ -35,13 +37,17 @@ public class TitleScreen : MonoBehaviour
     }
     public void StartGame(){
         fistBump.sprite = postBump;
-        StartCoroutine(LoadLevel());
+        titleUI.SetActive(false);
+        calibUI.SetActive(true);	
+        ///StartCoroutine(LoadLevel());
+
     }
     IEnumerator LoadLevel(){
         trebleScript.startGame = false;
         bassScript.startGame = false;
         yield return new WaitForSeconds(3);
         titleUI.SetActive(false);
+        calibUI.SetActive(true);
         SceneManager.LoadScene(SceneName);
         
     }

@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public float total = 20; 
     public bool thresholdMet = false, gameOver = false;
     public Slider caesuraHealth; 
+public GameObject caesura;
 
     public BossAnimationController bAC;
 
@@ -37,7 +38,7 @@ public class ScoreManager : MonoBehaviour
     {
         
        //score tracker and Caesura healthbar
-        if (score/total >= .8){
+        if (score/total >= .95){
             thresholdMet = true;     
         }
         caesuraHealth.value = score/total;
@@ -69,6 +70,7 @@ public class ScoreManager : MonoBehaviour
     public void LevelBegin(){
         LevelStartTime = Time.time;
         bAC.ActivateBoss();
+	caesura.SetActive(true);
         oscCtrl.StartSong();
     }
     public void HitTreble(){
