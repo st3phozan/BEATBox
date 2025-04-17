@@ -25,7 +25,7 @@ public class OSCJackTestSender : MonoBehaviour
         Debug.Log("🔥 Sent OSC /startSong");
     }
      public void Hit(){
-        client.Send("/hit");  // Send OSC message with no arguments
+        client.Send("/hit", 1f);  // Send OSC message with no arguments
         Debug.Log("🔥 Sent OSC /hit");
     }
     void OnDestroy()

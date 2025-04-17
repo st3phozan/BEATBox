@@ -91,9 +91,9 @@ public class GloveCalibration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	
+	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
         if (finishCalib){
-            if (trebleScript.startGame == true || bassScript.startGame == true){
+            if (distance <=.2f && distance!=0){
                 StartGame();
             }
         }
