@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.iam1337.extosc": {
+      "version": "file:C:/Users/st3ph/Downloads/extOSC-master/extOSC-master/Assets/extOSC",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      }
+    },
     "com.unity.burst": {
       "version": "1.8.17",
       "depth": 1,
@@ -198,6 +206,12 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.keijiro.osc-jack": {
+      "version": "file:C:/Users/st3ph/Downloads/OscJack-main/OscJack-main/Packages/jp.keijiro.osc-jack",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

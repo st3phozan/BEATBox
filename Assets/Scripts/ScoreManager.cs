@@ -17,6 +17,9 @@ public class ScoreManager : MonoBehaviour
     public Sprite great, yikes;
     public Animator feedbackAnimTreble, feedbackAnimBass;
     public AnimationTriggers triggers;
+    public AbletonTrigger aT;
+
+    public OSCJackTestSender oscCtrl;
 
     public float LevelTime = 180f;
     public float LevelStartTime = 0;
@@ -66,12 +69,13 @@ public class ScoreManager : MonoBehaviour
     public void LevelBegin(){
         LevelStartTime = Time.time;
         bAC.ActivateBoss();
+        oscCtrl.StartSong();
     }
     public void HitTreble(){
         score += 1;
         hurtResetter += 1;
         //feedback.sprite = great;
-        
+        oscCtrl.Hit();
        feedbackAnimTreble.SetTrigger("great");
     }
     public void MissTreble(){
@@ -82,6 +86,7 @@ public class ScoreManager : MonoBehaviour
         score += 1;
         hurtResetter += 1;
         //feedback.sprite = great;
+        oscCtrl.Hit();
         feedbackAnimBass.SetTrigger("great");
     }
     public void MissBass(){
