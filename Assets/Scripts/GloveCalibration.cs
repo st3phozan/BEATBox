@@ -108,7 +108,8 @@ public class GloveCalibration : MonoBehaviour
         yield return new WaitForSeconds(3);
         
         HUD.SetActive(true);
+	CalibMenu.SetActive(false);
         sm.LevelBegin();
-        CalibMenu.SetActive(false);
+        
     }
 }

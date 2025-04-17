@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public float score = 0;
+public float trebleScore = 0, bassScore = 0;
     public float animHitTrigger = 4, hurtResetter;
     public float total = 20; 
     public bool thresholdMet = false, gameOver = false;
     public Slider caesuraHealth; 
-public GameObject caesura;
+public GameObject caesura, scoreScreen;
 
     public BossAnimationController bAC;
 
@@ -18,6 +20,8 @@ public GameObject caesura;
     public Sprite great, yikes;
     public Animator feedbackAnimTreble, feedbackAnimBass;
     public AnimationTriggers triggers;
+
+public TMP_Text trebleScoreT, bassScoreT;
     //public AbletonTrigger aT;
 
     public OSCJackTestSender oscCtrl;
@@ -75,6 +79,7 @@ public GameObject caesura;
     }
     public void HitTreble(){
         score += 1;
+	trebleScore +=1;
         hurtResetter += 1;
         //feedback.sprite = great;
         oscCtrl.Hit();
@@ -86,6 +91,7 @@ public GameObject caesura;
     }
     public void HitBass(){
         score += 1;
+	bassScore +=1;
         hurtResetter += 1;
         //feedback.sprite = great;
         oscCtrl.Hit();
@@ -96,7 +102,9 @@ public GameObject caesura;
         feedbackAnimBass.SetTrigger("yikes");
     }
     public void EndSuccess(){
-
+	scoreScreen.SetActive(true);
+trebleScoreT.text = trebleScore.ToString();
+bassScoreT.text = bassScore.ToString();
     }
     public void EndFail(){
 

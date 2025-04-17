@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
-    public GameObject treble, bass, titleUI, calibUI, caesura; 
+    public GameObject treble, bass, titleUI, calibUI, introUI, scoreUI, endUI, HUD, caesura; 
     public bool isStart = false;
     public FistScript trebleScript, bassScript;
     public Image fistBump;
@@ -22,6 +22,12 @@ public class TitleScreen : MonoBehaviour
         trebleScript.isTitle = true;
         bassScript.isTitle = true;
 	calibUI.SetActive(false);
+	introUI.SetActive(false);
+	HUD.SetActive(false);
+	scoreUI.SetActive(false);
+	endUI.SetActive(false);
+
+
         fistBump.sprite = preBump;
     }
 
@@ -30,25 +36,27 @@ public class TitleScreen : MonoBehaviour
     {
 	distance = Vector3.Distance(treble.transform.position, bass.transform.position);
 	Debug.Log(distance);
-        if (distance <=.2f && distance!=0 && !isStart){
+        if (distance <=.2f && distance!=0){
             StartGame();
 	    isStart = true;
         }
     }
     public void StartGame(){
-        fistBump.sprite = postBump;
-        titleUI.SetActive(false);
-        calibUI.SetActive(true);	
-        ///StartCoroutine(LoadLevel());
+        	
+        StartCoroutine(LoadLevel());
 
     }
     IEnumerator LoadLevel(){
         trebleScript.startGame = false;
         bassScript.startGame = false;
+	fistBump.sprite = postBump;
         yield return new WaitForSeconds(3);
+
         titleUI.SetActive(false);
-        calibUI.SetActive(true);
-        SceneManager.LoadScene(SceneName);
+        introUI.SetActive(true);
+        titleUI.SetActive(false);
+        calibUI.SetActive(false);
+        //SceneManager.LoadScene(SceneName);
         
     }
 }
