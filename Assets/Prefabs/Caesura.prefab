@@ -168,6 +168,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1750197354950549132, guid: 94a6f96f48ebbf84e8cfe7431323640f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1750197354950549132, guid: 94a6f96f48ebbf84e8cfe7431323640f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6adabbfba7579714f8aa298bcf243a37, type: 2}
     - target: {fileID: 919132149155446097, guid: 94a6f96f48ebbf84e8cfe7431323640f, type: 3}
       propertyPath: m_Name
       value: Caesura
