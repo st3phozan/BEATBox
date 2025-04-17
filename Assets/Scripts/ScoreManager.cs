@@ -12,7 +12,7 @@ public float trebleScore = 0, bassScore = 0;
     public float total = 20; 
     public bool thresholdMet = false, gameOver = false;
     public Slider caesuraHealth; 
-public GameObject caesura, scoreScreen;
+public GameObject caesura, scoreScreen, failScreen;
 
     public BossAnimationController bAC;
 
@@ -73,10 +73,15 @@ public TMP_Text trebleScoreT, bassScoreT;
     }
     public void LevelBegin(){
         LevelStartTime = Time.time;
-        bAC.ActivateBoss();
-	caesura.SetActive(true);
+        StartCoroutine(LvlStart());
         oscCtrl.StartSong();
     }
+    IEnumerator LvlStart(){
+yield return new WaitForSeconds(2);
+bAC.ActivateBoss();
+	caesura.SetActive(true);
+	bAC.JumpAttack();
+}
     public void HitTreble(){
         score += 1;
 	trebleScore +=1;
@@ -107,6 +112,7 @@ trebleScoreT.text = trebleScore.ToString();
 bassScoreT.text = bassScore.ToString();
     }
     public void EndFail(){
+failScreen.SetActive(true);
 
     }
 }

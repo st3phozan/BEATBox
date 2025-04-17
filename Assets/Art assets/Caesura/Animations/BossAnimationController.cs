@@ -117,7 +117,7 @@ public class BossAnimationController : MonoBehaviour
 
     public void JumpAttack()
     {
-        bossActive = false;
+        //bossActive = false;
         ResetAllTriggers();
         animator.SetTrigger("JumpAttack");
     }
