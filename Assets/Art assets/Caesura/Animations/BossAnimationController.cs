@@ -115,6 +115,13 @@ public class BossAnimationController : MonoBehaviour
         animator.SetTrigger("Idle");
     }
 
+    public void JumpAttack()
+    {
+        bossActive = false;
+        ResetAllTriggers();
+        animator.SetTrigger("JumpAttack");
+    }
+
     void ResetAllTriggers()
     {
         animator.ResetTrigger("Attack");
@@ -122,5 +129,6 @@ public class BossAnimationController : MonoBehaviour
         animator.ResetTrigger("Die");
         animator.ResetTrigger("Win");
         animator.ResetTrigger("Idle");
+        animator.ResetTrigger("JumpAttack");
     }
 }
