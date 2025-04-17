@@ -47,19 +47,19 @@ public class TestNoteShooter : MonoBehaviour
                 //Debug.Log($"MIDI Note Received: {note}");
             }
         }
-        /*
+        
         if (Input.GetKeyDown(KeyCode.A)){
             GameObject NewNote = Instantiate(testNote, forward.position, Quaternion.identity);
             NewNote.GetComponent<TestNote>().target = positions[0];
         }
         else if (Input.GetKeyDown(KeyCode.W)){
-            GameObject NewNote =Instantiate(testNote, down.position, Quaternion.Euler(new Vector3(90, 0, 0)));
+            GameObject NewNote =Instantiate(testNote, ldown.position, Quaternion.Euler(new Vector3(90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[1];
         }
         else if (Input.GetKeyDown(KeyCode.S)){
-            GameObject NewNote =Instantiate(testNote, up.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            GameObject NewNote =Instantiate(testNote, rup.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
             NewNote.GetComponent<TestNote>().target = positions[2];
-        }*/
+        }
         
     }
     public void ShootNote(){

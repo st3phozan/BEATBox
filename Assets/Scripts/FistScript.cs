@@ -44,13 +44,23 @@ public class FistScript : MonoBehaviour
         }
 
 
-
-        if (Input.GetKeyDown(KeyCode.H)){
-            sm.HitBass();
+        if(isTreble){
+            if (Input.GetKeyDown(KeyCode.M)){
+                sm.MissTreble();
+            }
+            if (Input.GetKeyDown(KeyCode.H)){
+                sm.HitTreble(); }
         }
-        if (Input.GetKeyDown(KeyCode.M)){
-            sm.MissTreble();
+        else{
+            if (Input.GetKeyDown(KeyCode.N)){
+                sm.MissBass();
+            }
+            if (Input.GetKeyDown(KeyCode.G)){
+                sm.HitBass(); }
         }
+        
+        
+        
         /*if (Vector3.Distance (this.gameObject.transform.position, otherGlove.transform.position) <= .2f){
             if (isTitle){
                 startGame = true;

@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public float score = 0;
-    public float animHitTrigger = 4, an;
+    public float animHitTrigger = 4, hurtResetter;
     public float total = 20; 
-    public bool thresholdMet = false;
+    public bool thresholdMet = false, gameOver = false;
     public Slider caesuraHealth; 
+
+    public BossAnimationController bAC;
 
     public Image feedbackTreble, feedbackBass;
     public Sprite great, yikes;
@@ -41,24 +43,36 @@ public class ScoreManager : MonoBehaviour
         float timerDuration = Time.time - LevelStartTime;
          if (timerDuration >= LevelTime){
             if (thresholdMet){
+                if(!gameOver){
                 EndSuccess();
+                gameOver = true;
+                bAC.PlayerWin();
+                }
             }
             else{
+                if(!gameOver){
                 EndFail();
+                gameOver = true;
+                bAC.PlayerLoose();
+                }
             }
         }
-        if (score % 4 == 0 && score != 0){
-            triggers.Hurt = true;
+        if (hurtResetter % 4 == 0 && hurtResetter != 0){
+            bAC.TriggerAngry();
+            hurtResetter = 0;
         }
         
     }
     public void LevelBegin(){
         LevelStartTime = Time.time;
+        bAC.ActivateBoss();
     }
     public void HitTreble(){
         score += 1;
+        hurtResetter += 1;
         //feedback.sprite = great;
-        feedbackAnimTreble.SetTrigger("great");
+        
+       feedbackAnimTreble.SetTrigger("great");
     }
     public void MissTreble(){
         //feedback.sprite = yikes;
@@ -66,6 +80,7 @@ public class ScoreManager : MonoBehaviour
     }
     public void HitBass(){
         score += 1;
+        hurtResetter += 1;
         //feedback.sprite = great;
         feedbackAnimBass.SetTrigger("great");
     }

@@ -86,12 +86,13 @@ public class BossAnimationController : MonoBehaviour
 
     public void TriggerAngry()
     {
-        if (hasPlayedAngry)
-            return;
+        Debug.Log("ANGRYTRIGGERED");
+        /*if (hasPlayedAngry)
+            return;*/
 
         ResetAllTriggers();
         animator.SetTrigger("Angry");
-        hasPlayedAngry = true;
+        //hasPlayedAngry = true;
     }
 
     public void PlayerWin()
